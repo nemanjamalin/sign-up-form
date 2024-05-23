@@ -11,7 +11,19 @@
     --logo-section-height: calc(10rem + 3vh);
 
     --right-side-top-space: 10vh;
+
+    --font-size-400: clamp(1.5rem, 0.6vw + 0.5rem, 3rem);
 }
+
+input:focus{
+   border: 2px solid #4f86f7;
+   outline: none;
+}
+input[type="password"]:invalid{
+    border: 2px solid rgb(226, 102, 102);
+    outline: none;
+}
+
 
 a{
     text-decoration: none;
@@ -28,8 +40,9 @@ label{
 
 input{
     display: block;
-    height: 2.7rem;
+    height: calc(2.7rem + 0.2vh);
     width: 20vw;
+    font-size: 1.5rem;
 }
 
 .part{
@@ -40,6 +53,28 @@ input{
 .row{
     margin-bottom: calc(2rem + 1vh);
 }
+
+
+button{
+    background-color: #596D48;
+    color: #fff;
+    width: clamp(18rem,20rem + 0.1vw, 25rem);
+    height: clamp(3.8rem, 4rem + 0.3vh, 6.5rem);
+    border-radius: 1rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.button-section{
+    position: relative;
+    top: calc(9.5rem + 0.6vh);
+}
+
+.button-section p, .button-section p a{
+    font-size: var(--font-size-400);
+    margin-top: 2vh;
+}
+
 
 .container{
     width: 100vw;
