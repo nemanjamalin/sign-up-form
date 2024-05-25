@@ -1,11 +1,4 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-
-    font-family: "Roboto", sans-serif;
-    font-size: 10px;
-
+:root{
 
     --left-side-top-space: 20vh;
     --logo-section-height: calc(10rem + 3vh);
@@ -13,6 +6,17 @@
     --right-side-top-space: 10vh;
 
     --font-size-400: clamp(1.5rem, 0.6vw + 0.5rem, 3rem);
+
+    --form-font-size-main : clamp(1.5rem, 1.8rem + 0.2vh, 8rem);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: "Roboto", sans-serif;
+    font-size: 10px;
 }
 
 input:focus{
@@ -32,7 +36,7 @@ a{
 }
 
 label{
-    font-size: 1.5rem;
+    font-size: var(--form-font-size-main);
     letter-spacing: 0.1rem;
     color: #333;
     font-weight: 400;
@@ -40,9 +44,9 @@ label{
 
 input{
     display: block;
-    height: calc(2.7rem + 0.2vh);
+    height: calc(3.5vh + 0.5rem);
     width: 20vw;
-    font-size: 1.5rem;
+    font-size: var(--form-font-size-main);
 }
 
 .part{
@@ -56,18 +60,26 @@ input{
 
 
 button{
-    background-color: #596D48;
+    background-color: #4f86f7;
+    border: none;
     color: #fff;
     width: clamp(18rem,20rem + 0.1vw, 25rem);
     height: clamp(3.8rem, 4rem + 0.3vh, 6.5rem);
     border-radius: 1rem;
-    font-size: 1.5rem;
+    font-size: var(--form-font-size-main);
     font-weight: 500;
+    box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
+}
+
+button:hover{
+    background-color: #fff;
+    color: #4f86f7;
+    box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
+    transition: 0.3s;
 }
 
 .button-section{
-    position: relative;
-    top: calc(9.5rem + 0.6vh);
+    padding: 2rem 3vw;
 }
 
 .button-section p, .button-section p a{
@@ -142,12 +154,17 @@ button{
     margin-bottom: 3vh;
 }
 
+
 .container .right-side form{
-    /* outline: 1px solid black; */
     margin-top: calc(0.5rem + 3vh);
+}
+
+.container .right-side form .inner-box{
+    /* outline: 1px solid black; */
     padding: 1rem 3vw;
     background-color: #fff;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    max-height: 45vh;
 }
 .container .right-side form h2{
     padding-left: 0;
